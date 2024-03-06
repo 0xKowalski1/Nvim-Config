@@ -12,9 +12,6 @@ require('keymappings')
 -- Theme
 require('plugins-settings.onedark')
  
--- File Explorer
-require('plugins-settings.nvim-tree')
-require('plugins-settings.nvim-web-devicons')
-
 -- Telescope
+require('plugins-settings.nvim-web-devicons')
 require('plugins-settings.telescope')

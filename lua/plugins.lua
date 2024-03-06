@@ -5,20 +5,16 @@ return require('packer').startup(function(use)
   -- Theme
   use 'navarasu/onedark.nvim'
 
-  -- File Explorer
-  use {
-    'nvim-tree/nvim-tree.lua', -- Explorer
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- Icons
-    },
-  }
-
   -- Telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" }
+  }
 
 end)
 
