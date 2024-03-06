@@ -19,3 +19,6 @@ require('plugins-settings.onedark')
 -- Telescope
 require('plugins-settings.nvim-web-devicons')
 require('plugins-settings.telescope')
+
+-- Dashboard
+require('plugins-settings.alpha-nvim')
