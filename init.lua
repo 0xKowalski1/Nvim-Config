@@ -8,10 +8,6 @@ require('settings')
 
 require('keymappings')
 
--- LSPs
-require'lspconfig'.solidity_ls.setup{}
-require'lspconfig'.tsserver.setup{}
-
 -- Plugin Settings
 -- Theme
 require('plugins-settings.onedark')
@@ -22,3 +18,6 @@ require('plugins-settings.telescope')
 
 -- Dashboard
 require('plugins-settings.alpha-nvim')
+
+-- Lsp
+require('plugins-settings.nvim-lspconfig')
