@@ -8,4 +8,4 @@ map('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
 map('n', '<C-f>', '<cmd>Telescope live_grep<cr>', opts)
 
 -- Open file browser
-map('n', '<space>t', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',opts)
+map('n', '<C-space>', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',opts)
