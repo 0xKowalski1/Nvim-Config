@@ -5,6 +5,9 @@ return require('packer').startup(function(use)
   -- Theme
   use 'navarasu/onedark.nvim'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
   -- Telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.5',

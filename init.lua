@@ -8,6 +8,10 @@ require('settings')
 
 require('keymappings')
 
+-- LSPs
+require'lspconfig'.solidity_ls.setup{}
+require'lspconfig'.tsserver.setup{}
+
 -- Plugin Settings
 -- Theme
 require('plugins-settings.onedark')
