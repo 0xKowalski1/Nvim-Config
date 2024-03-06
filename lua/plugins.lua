@@ -6,5 +6,13 @@ return require('packer').startup(function(use)
   use 'navarasu/onedark.nvim'
 
   -- File Explorer
+  use {
+    'nvim-tree/nvim-tree.lua', -- Explorer
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- Icons
+    },
+  }
+
+
 end)
 
