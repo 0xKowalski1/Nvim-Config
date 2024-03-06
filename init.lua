@@ -6,6 +6,8 @@ require('plugins') -- Plugins + Plugin Manager
 
 require('settings')
 
+require('keymappings')
+
 -- Plugin Settings
 -- Theme
 require('plugins-settings.onedark')
@@ -14,3 +16,5 @@ require('plugins-settings.onedark')
 require('plugins-settings.nvim-tree')
 require('plugins-settings.nvim-web-devicons')
 
+-- Telescope
+require('plugins-settings.telescope')
