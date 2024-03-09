@@ -1,5 +1,6 @@
 local lspconfig = require('lspconfig')
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {pattern = "*.vy", command = "set filetype=vy"}) -- Force nvim to recognize vyper files, currently no vyper lsp :)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -17,6 +18,8 @@ lspconfig.solidity.setup({
 lspconfig.tsserver.setup({
   capabilities = capabilities,
 })
+
+lspconfig.pyright.setup{}
 
 
 local cmp = require'cmp'
