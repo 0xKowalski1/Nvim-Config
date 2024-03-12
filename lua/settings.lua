@@ -20,3 +20,11 @@ set.clipboard = 'unnamedplus'   -- Access system clipboard
 -- Disable swap files for minimal distraction
 set.swapfile = false      -- Disable swapfile
 
+-- Enable spellcheck for markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "en_us"
+  end,
+})
