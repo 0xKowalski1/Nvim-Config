@@ -28,3 +28,21 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spelllang = "en_us"
   end,
 })
+
+-- Setup layout
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  callback = function()
+    -- Create a vertical split
+    vim.cmd("vsplit")
+    vim.cmd("Alpha")
+    -- Create a horizontal split in the left vertical split
+    vim.cmd("wincmd h")
+    vim.cmd("split")
+    -- Open terminal in the bottom left split
+    vim.cmd("wincmd j")
+    vim.cmd("resize 15")
+    vim.cmd("terminal")
+  end,
+})
+

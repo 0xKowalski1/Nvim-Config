@@ -12,3 +12,15 @@ map('n', '<S-f>', '<cmd>Telescope live_grep cwd=~/<cr>', opts) -- Grep home
 
 -- Open file browser
 map('n', '<C-space>', ':Telescope file_browser path=%:p:h select_buffer=true<CR>',opts)
+
+-- Vertical split mapping
+map('n', '<C-v>', ':vsplit<CR>', opts)
+
+-- Horizontal split mapping
+map('n', '<C-s>', ':split<CR>', opts)
+
+-- Navigate splits
+map('n', '<C-Up>', '<C-w>k', opts)
+map('n', '<C-Down>', '<C-w>j', opts)
+map('n', '<C-Left>', '<C-w>h', opts)
+map('n', '<C-Right>', '<C-w>l', opts)
