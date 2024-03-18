@@ -29,5 +29,8 @@ return require('packer').startup(function(use)
     'goolord/alpha-nvim',
     requires = { 'nvim-tree/nvim-web-devicons' },
   }
+
+  -- Glow for markdown previews
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 end)
 
