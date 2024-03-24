@@ -24,3 +24,10 @@ map('n', '<C-Up>', '<C-w>k', opts)
 map('n', '<C-Down>', '<C-w>j', opts)
 map('n', '<C-Left>', '<C-w>h', opts)
 map('n', '<C-Right>', '<C-w>l', opts)
+
+-- Ticks!
+function insertTick()
+  vim.api.nvim_put({'✓'}, '', true, true)
+end
+
+map('i', '<F5>', '<cmd>lua insertTick()<CR>', opts)
