@@ -32,5 +32,8 @@ return require('packer').startup(function(use)
 
   -- Glow for markdown previews
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
+  -- Format (on save)
+  use 'sbdchd/neoformat'
 end)
 

@@ -48,3 +48,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- Format on save
+vim.cmd([[
+  autocmd BufWritePre * if &filetype != 'markdown' | Neoformat | endif
+]])
+
