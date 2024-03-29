@@ -21,6 +21,8 @@ lspconfig.tsserver.setup({
 
 lspconfig.pyright.setup{}
 
+lspconfig.gopls.setup{}
+
 
 local cmp = require'cmp'
 
