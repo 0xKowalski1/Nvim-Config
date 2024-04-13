@@ -23,6 +23,8 @@ lspconfig.pyright.setup{}
 
 lspconfig.gopls.setup{}
 
+lspconfig.html.setup{}
+
 
 local cmp = require'cmp'
 
