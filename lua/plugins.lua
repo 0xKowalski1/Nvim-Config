@@ -5,6 +5,12 @@ return require('packer').startup(function(use)
   -- Theme
   use 'navarasu/onedark.nvim'
 
+  -- Tree sitter helper
+  use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+  }
+
   -- LSP
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin

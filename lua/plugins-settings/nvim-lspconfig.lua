@@ -1,6 +1,6 @@
 local lspconfig = require('lspconfig')
 
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {pattern = "*.vy", command = "set filetype=vy"}) -- Force nvim to recognize vyper files, currently no vyper lsp :)
+
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -23,7 +23,20 @@ lspconfig.pyright.setup{}
 
 lspconfig.gopls.setup{}
 
-lspconfig.html.setup{}
+lspconfig.html.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html", "templ" },
+})
+
+vim.filetype.add({ extension = { templ = "templ" } })
+
+lspconfig.templ.setup{
+    cmd = { "nix", "run", "github:a-h/templ", "lsp" }
+}
+
+vim.api.nvim_create_autocmd("BufEnter", { pattern = "*.templ", callback = function() vim.cmd("TSBufEnable highlight") end }) 
+
 
 
 local cmp = require'cmp'
