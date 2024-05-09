@@ -12,6 +12,9 @@ require('keymappings')
 -- Plugin Settings
 -- Theme
 require('plugins-settings.onedark')
+
+--Harpoon
+require('plugins-settings.harpoon')
  
 -- Telescope
 require('plugins-settings.nvim-web-devicons')
