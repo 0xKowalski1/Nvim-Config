@@ -13,14 +13,7 @@ require('telescope').setup {
     }
   },
   extensions = {
-    file_browser = {
-      hidden = true,
-      theme = "ivy",
-      -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
-      mappings = {},
     },
-  },
 }
 
 require("telescope").load_extension "file_browser"

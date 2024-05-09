@@ -6,8 +6,6 @@ set.cursorline = true    -- Highlight the current line
 
 -- Basic Editing Configurations
 set.expandtab = true     -- Use spaces instead of tabs
-set.shiftwidth = 4       -- Size of an indent
-set.tabstop = 4          -- Number of spaces tabs count for
 set.smartindent = true   -- Insert indents automatically
 
 -- Search Configurations
@@ -34,13 +32,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
   callback = function()
     if #vim.fn.argv() == 0 then
-        -- Create a vertical split
         vim.cmd("Alpha")
-        vim.cmd("split")
-        -- Open terminal in the bottom left split
-        vim.cmd("wincmd j")
-        vim.cmd("resize 10")
-        vim.cmd("terminal")
     end
   end,
 })

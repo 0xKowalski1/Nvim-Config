@@ -16,7 +16,7 @@ lspconfig.solidity.setup({
 })
 
 lspconfig.tsserver.setup({
-  capabilities = capabilities,
+    capabilities = capabilities,
 })
 
 lspconfig.pyright.setup{}
